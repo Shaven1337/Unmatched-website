@@ -1,9 +1,18 @@
 {
   "name": "unmatched-website",
   "version": "1.0.0",
+  "type": "module",
   "main": "index.js",
+  "imports": {
+    "#*": {
+      "my-package-dev": "./src/*",
+      "default": "./dist/*"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "start": "npm run build && node dist/index.js",
+    "lint": "eslint . --ext .ts"
   },
   "keywords": [],
   "author": "",
@@ -14,5 +23,8 @@
     "eslint": "^9.22.0",
     "typescript": "^5.8.2"
   },
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
 }

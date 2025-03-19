@@ -1,4 +1,4 @@
-import { getMessage } from "#core/utils";
+import { getMessage } from "#core/utils.js";
 
 const test: any = "This should trigger an ESLint error"; // Ошибка ESLint
 

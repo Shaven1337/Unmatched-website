@@ -1,13 +1,15 @@
 {
   "compilerOptions": {
     "target": "ESNext",
-    "module": "CommonJS",
-    "rootDir": "./src",
+    "module": "NodeNext",
     "outDir": "./dist",
+    "rootDir": "./src",
     "strict": true,
-    "baseUrl": "./src",
+    "noEmit":false,
+    "customConditions": ["my-package-dev"],
+    "baseUrl": ".",  
     "paths": {
-      "#core/*": ["core/*"]
+      "#*": ["src/*"]  
     },
     "esModuleInterop": true,
     "skipLibCheck": true,
